@@ -21,6 +21,7 @@ public class UserController {
     private final UserService userService;
     private final AuthenticationManager authenticationManager;
 
+    // 회원가입
     @PostMapping("/signup")
     public ResponseEntity<String> signup(@RequestBody UserDto userDto) {
         try {
@@ -31,6 +32,7 @@ public class UserController {
         }
     }
 
+    // 로그인
     @PostMapping("/login")
     public ResponseEntity<String> login(@RequestBody LoginRequest loginRequest, HttpServletRequest request) {
         try {

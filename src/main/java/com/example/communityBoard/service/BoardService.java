@@ -42,7 +42,7 @@ public class BoardService {
         boardRepository.save(board);
     }
 
-    // 게시글 상세보기
+    // 게시글 상세 조회
     public BoardDto getBoardById(Long id) {
         Board board = boardRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("게시글을 찾을 수 없습니다."));
